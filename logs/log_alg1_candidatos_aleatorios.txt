@@ -1,0 +1,72 @@
+======================================================================================
+                             Sistemas Distribuidos Prof. Elias
+                           LOG do Trabalho Pratico 1, Algoritmo 1
+Algoritmo de eleição de líder com candidatos baseado em Chang-Roberts no anel (VRing).
+                      Este programa foi executado para: N=3 processos.
+                                 Candidatos iniciais: [0 1]
+======================================================================================
+[T=0.0] Proc  0 -> Enviou candidatura (ID: 0) para o Proc 1
+[T=0.0] Proc  1 -> Enviou candidatura (ID: 1) para o Proc 2
+[T=1.0] Proc  1 -> Recebeu mensagem do Proc 0 (Candidato: 0)
+[T=1.0] Proc  1 -> Descartou mensagem recebida (Candidato 0 <= Líder 1)
+[T=1.0] Proc  2 -> Recebeu mensagem do Proc 1 (Candidato: 1)
+[T=1.0] Proc  2 -> Atualizou líder conhecido para 1
+[T=1.0] Proc  2 -> Repassou candidatura (ID: 1) para o Proc 0
+[T=2.0] Proc  0 -> Recebeu mensagem do Proc 2 (Candidato: 1)
+[T=2.0] Proc  0 -> Atualizou líder conhecido para 1
+[T=2.0] Proc  0 -> Repassou candidatura (ID: 1) para o Proc 1
+[T=3.0] Proc  1 -> Recebeu mensagem do Proc 0 (Candidato: 1)
+[T=3.0] Proc  1 -> Identificou o próprio ID! LÍDER ELEITO!
+======================================================================================
+Número total de mensagens enviadas: 4
+Tempo total de simulação até a eleição do líder: 3.0
+======================================================================================
+======================================================================================
+                             Sistemas Distribuidos Prof. Elias
+                           LOG do Trabalho Pratico 1, Algoritmo 1
+Algoritmo de eleição de líder com candidatos baseado em Chang-Roberts no anel (VRing).
+                      Este programa foi executado para: N=3 processos.
+                                 Candidatos iniciais: [0 2]
+======================================================================================
+[T=0.0] Proc  0 -> Enviou candidatura (ID: 0) para o Proc 1
+[T=0.0] Proc  2 -> Enviou candidatura (ID: 2) para o Proc 0
+[T=1.0] Proc  1 -> Recebeu mensagem do Proc 0 (Candidato: 0)
+[T=1.0] Proc  1 -> Atualizou líder conhecido para 0
+[T=1.0] Proc  1 -> Repassou candidatura (ID: 0) para o Proc 2
+[T=1.0] Proc  0 -> Recebeu mensagem do Proc 2 (Candidato: 2)
+[T=1.0] Proc  0 -> Atualizou líder conhecido para 2
+[T=1.0] Proc  0 -> Repassou candidatura (ID: 2) para o Proc 1
+[T=2.0] Proc  2 -> Recebeu mensagem do Proc 1 (Candidato: 0)
+[T=2.0] Proc  2 -> Descartou mensagem recebida (Candidato 0 <= Líder 2)
+[T=2.0] Proc  1 -> Recebeu mensagem do Proc 0 (Candidato: 2)
+[T=2.0] Proc  1 -> Atualizou líder conhecido para 2
+[T=2.0] Proc  1 -> Repassou candidatura (ID: 2) para o Proc 2
+[T=3.0] Proc  2 -> Recebeu mensagem do Proc 1 (Candidato: 2)
+[T=3.0] Proc  2 -> Identificou o próprio ID! LÍDER ELEITO!
+======================================================================================
+Número total de mensagens enviadas: 5
+Tempo total de simulação até a eleição do líder: 3.0
+======================================================================================
+======================================================================================
+                             Sistemas Distribuidos Prof. Elias
+                           LOG do Trabalho Pratico 1, Algoritmo 1
+Algoritmo de eleição de líder com candidatos baseado em Chang-Roberts no anel (VRing).
+                      Este programa foi executado para: N=3 processos.
+                                 Candidatos iniciais: [1 2]
+======================================================================================
+[T=0.0] Proc  1 -> Enviou candidatura (ID: 1) para o Proc 2
+[T=0.0] Proc  2 -> Enviou candidatura (ID: 2) para o Proc 0
+[T=1.0] Proc  2 -> Recebeu mensagem do Proc 1 (Candidato: 1)
+[T=1.0] Proc  2 -> Descartou mensagem recebida (Candidato 1 <= Líder 2)
+[T=1.0] Proc  0 -> Recebeu mensagem do Proc 2 (Candidato: 2)
+[T=1.0] Proc  0 -> Atualizou líder conhecido para 2
+[T=1.0] Proc  0 -> Repassou candidatura (ID: 2) para o Proc 1
+[T=2.0] Proc  1 -> Recebeu mensagem do Proc 0 (Candidato: 2)
+[T=2.0] Proc  1 -> Atualizou líder conhecido para 2
+[T=2.0] Proc  1 -> Repassou candidatura (ID: 2) para o Proc 2
+[T=3.0] Proc  2 -> Recebeu mensagem do Proc 1 (Candidato: 2)
+[T=3.0] Proc  2 -> Identificou o próprio ID! LÍDER ELEITO!
+======================================================================================
+Número total de mensagens enviadas: 4
+Tempo total de simulação até a eleição do líder: 3.0
+======================================================================================

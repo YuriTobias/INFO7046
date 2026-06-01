@@ -1,0 +1,1002 @@
+====================================================================================================
+                                Sistemas Distribuidos Prof. Elias
+                             LOG do Trabalho Pratico 1, Algoritmo 2
+Algoritmo aleatorizado para eleição de líder (Randomized Leader Election Algorithm) baseado no anel.
+                       Este programa foi executado para: N=3 processos.
+====================================================================================================
+RODADA: 1
+====================================================================================================
+[T=0.0] Proc  0 -> Sorteou bit inicial: 1
+[T=0.0] Proc  0 -> Enviou mensagem inicial para Proc  1 (RefId:  0, Bit: 1)
+[T=0.0] Proc  1 -> Sorteou bit inicial: 1
+[T=0.0] Proc  1 -> Enviou mensagem inicial para Proc  2 (RefId:  1, Bit: 1)
+[T=0.0] Proc  2 -> Sorteou bit inicial: 1
+[T=0.0] Proc  2 -> Enviou mensagem inicial para Proc  0 (RefId:  2, Bit: 1)
+[T=1.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 1)
+[T=1.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 1)
+[T=1.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 1)
+[T=1.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 1)
+[T=1.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 1)
+[T=1.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 1)
+[T=2.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 1)
+[T=2.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 1)
+[T=2.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 1)
+[T=2.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 1)
+[T=2.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 1)
+[T=2.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 1)
+[T=3.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 1)
+[T=3.0] Proc  0 -> 3 candidatos restantes. Reiniciando eleição...
+[T=3.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 1)
+[T=3.0] Proc  1 -> 3 candidatos restantes. Reiniciando eleição...
+[T=3.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 1)
+[T=3.0] Proc  2 -> 3 candidatos restantes. Reiniciando eleição...
+[T=3.0] Proc  0 -> Sorteou novo bit: 0
+[T=3.0] Proc  0 -> Encaminhou mensagem para Proc  1 (RefId:  0, Bit: 0)
+[T=3.0] Proc  1 -> Sorteou novo bit: 0
+[T=3.0] Proc  1 -> Encaminhou mensagem para Proc  2 (RefId:  1, Bit: 0)
+[T=3.0] Proc  2 -> Sorteou novo bit: 0
+[T=3.0] Proc  2 -> Encaminhou mensagem para Proc  0 (RefId:  2, Bit: 0)
+====================================================================================================
+RODADA: 2
+====================================================================================================
+[T=4.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 0)
+[T=4.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 0)
+[T=4.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 0)
+[T=4.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 0)
+[T=4.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=4.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=5.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 0)
+[T=5.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 0)
+[T=5.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 0)
+[T=5.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 0)
+[T=5.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=5.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=6.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 0)
+[T=6.0] Proc  0 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=6.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 0)
+[T=6.0] Proc  1 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=6.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 0)
+[T=6.0] Proc  2 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=6.0] Proc  0 -> Sorteou novo bit: 0
+[T=6.0] Proc  0 -> Encaminhou mensagem para Proc  1 (RefId:  0, Bit: 0)
+[T=6.0] Proc  1 -> Sorteou novo bit: 0
+[T=6.0] Proc  1 -> Encaminhou mensagem para Proc  2 (RefId:  1, Bit: 0)
+[T=6.0] Proc  2 -> Sorteou novo bit: 0
+[T=6.0] Proc  2 -> Encaminhou mensagem para Proc  0 (RefId:  2, Bit: 0)
+====================================================================================================
+RODADA: 3
+====================================================================================================
+[T=7.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 0)
+[T=7.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 0)
+[T=7.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 0)
+[T=7.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 0)
+[T=7.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=7.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=8.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 0)
+[T=8.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 0)
+[T=8.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 0)
+[T=8.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 0)
+[T=8.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=8.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=9.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 0)
+[T=9.0] Proc  0 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=9.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 0)
+[T=9.0] Proc  1 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=9.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 0)
+[T=9.0] Proc  2 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=9.0] Proc  0 -> Sorteou novo bit: 0
+[T=9.0] Proc  0 -> Encaminhou mensagem para Proc  1 (RefId:  0, Bit: 0)
+[T=9.0] Proc  1 -> Sorteou novo bit: 0
+[T=9.0] Proc  1 -> Encaminhou mensagem para Proc  2 (RefId:  1, Bit: 0)
+[T=9.0] Proc  2 -> Sorteou novo bit: 0
+[T=9.0] Proc  2 -> Encaminhou mensagem para Proc  0 (RefId:  2, Bit: 0)
+====================================================================================================
+RODADA: 4
+====================================================================================================
+[T=10.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 0)
+[T=10.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 0)
+[T=10.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 0)
+[T=10.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 0)
+[T=10.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=10.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=11.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 0)
+[T=11.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 0)
+[T=11.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 0)
+[T=11.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 0)
+[T=11.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=11.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=12.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 0)
+[T=12.0] Proc  0 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=12.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 0)
+[T=12.0] Proc  1 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=12.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 0)
+[T=12.0] Proc  2 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=12.0] Proc  0 -> Sorteou novo bit: 1
+[T=12.0] Proc  0 -> Encaminhou mensagem para Proc  1 (RefId:  0, Bit: 1)
+[T=12.0] Proc  1 -> Sorteou novo bit: 1
+[T=12.0] Proc  1 -> Encaminhou mensagem para Proc  2 (RefId:  1, Bit: 1)
+[T=12.0] Proc  2 -> Sorteou novo bit: 0
+[T=12.0] Proc  2 -> Encaminhou mensagem para Proc  0 (RefId:  2, Bit: 0)
+====================================================================================================
+RODADA: 5
+====================================================================================================
+[T=13.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 1)
+[T=13.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 1)
+[T=13.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 1)
+[T=13.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 1)
+[T=13.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=13.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=14.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 1)
+[T=14.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 1)
+[T=14.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 1)
+[T=14.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 1)
+[T=14.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=14.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=15.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 1)
+[T=15.0] Proc  0 -> 2 candidatos restantes. Reiniciando eleição...
+[T=15.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 1)
+[T=15.0] Proc  1 -> 2 candidatos restantes. Reiniciando eleição...
+[T=15.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 0)
+[T=15.0] Proc  2 -> 2 candidatos restantes. Reiniciando eleição...
+[T=15.0] Proc  0 -> Sorteou novo bit: 0
+[T=15.0] Proc  0 -> Encaminhou mensagem para Proc  1 (RefId:  0, Bit: 0)
+[T=15.0] Proc  1 -> Sorteou novo bit: 1
+[T=15.0] Proc  1 -> Encaminhou mensagem para Proc  2 (RefId:  1, Bit: 1)
+[T=15.0] Proc  2 -> Encaminhou mensagem para Proc  0 (RefId:  2, Bit: 0)
+====================================================================================================
+RODADA: 6
+====================================================================================================
+[T=16.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 0)
+[T=16.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 0)
+[T=16.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 1)
+[T=16.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 1)
+[T=16.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=16.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=17.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 0)
+[T=17.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 0)
+[T=17.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 1)
+[T=17.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 1)
+[T=17.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=17.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=18.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 0)
+[T=18.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 1)
+[T=18.0] Proc  1 -> IDENTIFICOU LÍDER ÚNICO! Fim da eleição.
+====================================================================================================
+Número total de rodadas: 6
+Número total de mensagens enviadas: 54
+Tempo total de simulação até a eleição do líder: 18.0
+====================================================================================================
+====================================================================================================
+                                Sistemas Distribuidos Prof. Elias
+                             LOG do Trabalho Pratico 1, Algoritmo 2
+Algoritmo aleatorizado para eleição de líder (Randomized Leader Election Algorithm) baseado no anel.
+                       Este programa foi executado para: N=3 processos.
+====================================================================================================
+RODADA: 1
+====================================================================================================
+[T=0.0] Proc  0 -> Sorteou bit inicial: 1
+[T=0.0] Proc  0 -> Enviou mensagem inicial para Proc  1 (RefId:  0, Bit: 1)
+[T=0.0] Proc  1 -> Sorteou bit inicial: 1
+[T=0.0] Proc  1 -> Enviou mensagem inicial para Proc  2 (RefId:  1, Bit: 1)
+[T=0.0] Proc  2 -> Sorteou bit inicial: 0
+[T=0.0] Proc  2 -> Enviou mensagem inicial para Proc  0 (RefId:  2, Bit: 0)
+[T=1.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 1)
+[T=1.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 1)
+[T=1.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 1)
+[T=1.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 1)
+[T=1.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=1.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=2.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 1)
+[T=2.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 1)
+[T=2.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 1)
+[T=2.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 1)
+[T=2.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=2.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=3.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 1)
+[T=3.0] Proc  0 -> 2 candidatos restantes. Reiniciando eleição...
+[T=3.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 1)
+[T=3.0] Proc  1 -> 2 candidatos restantes. Reiniciando eleição...
+[T=3.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 0)
+[T=3.0] Proc  2 -> 2 candidatos restantes. Reiniciando eleição...
+[T=3.0] Proc  0 -> Sorteou novo bit: 0
+[T=3.0] Proc  0 -> Encaminhou mensagem para Proc  1 (RefId:  0, Bit: 0)
+[T=3.0] Proc  1 -> Sorteou novo bit: 0
+[T=3.0] Proc  1 -> Encaminhou mensagem para Proc  2 (RefId:  1, Bit: 0)
+[T=3.0] Proc  2 -> Encaminhou mensagem para Proc  0 (RefId:  2, Bit: 0)
+====================================================================================================
+RODADA: 2
+====================================================================================================
+[T=4.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 0)
+[T=4.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 0)
+[T=4.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 0)
+[T=4.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 0)
+[T=4.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=4.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=5.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 0)
+[T=5.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 0)
+[T=5.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 0)
+[T=5.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 0)
+[T=5.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=5.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=6.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 0)
+[T=6.0] Proc  0 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=6.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 0)
+[T=6.0] Proc  1 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=6.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 0)
+[T=6.0] Proc  2 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=6.0] Proc  0 -> Sorteou novo bit: 1
+[T=6.0] Proc  0 -> Encaminhou mensagem para Proc  1 (RefId:  0, Bit: 1)
+[T=6.0] Proc  1 -> Sorteou novo bit: 0
+[T=6.0] Proc  1 -> Encaminhou mensagem para Proc  2 (RefId:  1, Bit: 0)
+[T=6.0] Proc  2 -> Sorteou novo bit: 0
+[T=6.0] Proc  2 -> Encaminhou mensagem para Proc  0 (RefId:  2, Bit: 0)
+====================================================================================================
+RODADA: 3
+====================================================================================================
+[T=7.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 1)
+[T=7.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 1)
+[T=7.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 0)
+[T=7.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 0)
+[T=7.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=7.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=8.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 1)
+[T=8.0] Proc  2 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 1)
+[T=8.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 0)
+[T=8.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 0)
+[T=8.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=8.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=9.0] Proc  0 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 1)
+[T=9.0] Proc  0 -> IDENTIFICOU LÍDER ÚNICO! Fim da eleição.
+====================================================================================================
+Número total de rodadas: 3
+Número total de mensagens enviadas: 27
+Tempo total de simulação até a eleição do líder:  9.0
+====================================================================================================
+====================================================================================================
+                                Sistemas Distribuidos Prof. Elias
+                             LOG do Trabalho Pratico 1, Algoritmo 2
+Algoritmo aleatorizado para eleição de líder (Randomized Leader Election Algorithm) baseado no anel.
+                       Este programa foi executado para: N=4 processos.
+====================================================================================================
+RODADA: 1
+====================================================================================================
+[T=0.0] Proc  0 -> Sorteou bit inicial: 1
+[T=0.0] Proc  0 -> Enviou mensagem inicial para Proc  1 (RefId:  0, Bit: 1)
+[T=0.0] Proc  1 -> Sorteou bit inicial: 0
+[T=0.0] Proc  1 -> Enviou mensagem inicial para Proc  2 (RefId:  1, Bit: 0)
+[T=0.0] Proc  2 -> Sorteou bit inicial: 0
+[T=0.0] Proc  2 -> Enviou mensagem inicial para Proc  3 (RefId:  2, Bit: 0)
+[T=0.0] Proc  3 -> Sorteou bit inicial: 1
+[T=0.0] Proc  3 -> Enviou mensagem inicial para Proc  0 (RefId:  3, Bit: 1)
+[T=1.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 1)
+[T=1.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 1)
+[T=1.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 0)
+[T=1.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  1, Bit: 0)
+[T=1.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=1.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  2, Bit: 0)
+[T=1.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  3, Valor: 1)
+[T=1.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  3, Bit: 1)
+[T=2.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 1)
+[T=2.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  0, Bit: 1)
+[T=2.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 0)
+[T=2.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 0)
+[T=2.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  2, Valor: 0)
+[T=2.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=2.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  3, Valor: 1)
+[T=2.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  3, Bit: 1)
+[T=3.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 1)
+[T=3.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 1)
+[T=3.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  1, Valor: 0)
+[T=3.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 0)
+[T=3.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=3.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=3.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  3, Valor: 1)
+[T=3.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  3, Bit: 1)
+[T=4.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  0, Valor: 1)
+[T=4.0] Proc  0 -> 2 candidatos restantes. Reiniciando eleição...
+[T=4.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 0)
+[T=4.0] Proc  1 -> 2 candidatos restantes. Reiniciando eleição...
+[T=4.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 0)
+[T=4.0] Proc  2 -> 2 candidatos restantes. Reiniciando eleição...
+[T=4.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  3, Valor: 1)
+[T=4.0] Proc  3 -> 2 candidatos restantes. Reiniciando eleição...
+[T=4.0] Proc  0 -> Sorteou novo bit: 0
+[T=4.0] Proc  0 -> Encaminhou mensagem para Proc  1 (RefId:  0, Bit: 0)
+[T=4.0] Proc  1 -> Encaminhou mensagem para Proc  2 (RefId:  1, Bit: 0)
+[T=4.0] Proc  2 -> Encaminhou mensagem para Proc  3 (RefId:  2, Bit: 0)
+[T=4.0] Proc  3 -> Sorteou novo bit: 1
+[T=4.0] Proc  3 -> Encaminhou mensagem para Proc  0 (RefId:  3, Bit: 1)
+====================================================================================================
+RODADA: 2
+====================================================================================================
+[T=5.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 0)
+[T=5.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 0)
+[T=5.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 0)
+[T=5.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  1, Bit: 0)
+[T=5.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=5.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  2, Bit: 0)
+[T=5.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  3, Valor: 1)
+[T=5.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  3, Bit: 1)
+[T=6.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 0)
+[T=6.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  0, Bit: 0)
+[T=6.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 0)
+[T=6.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 0)
+[T=6.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  2, Valor: 0)
+[T=6.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=6.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  3, Valor: 1)
+[T=6.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  3, Bit: 1)
+[T=7.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 0)
+[T=7.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 0)
+[T=7.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  1, Valor: 0)
+[T=7.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 0)
+[T=7.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=7.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=7.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  3, Valor: 1)
+[T=7.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  3, Bit: 1)
+[T=8.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  0, Valor: 0)
+[T=8.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 0)
+[T=8.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 0)
+[T=8.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  3, Valor: 1)
+[T=8.0] Proc  3 -> IDENTIFICOU LÍDER ÚNICO! Fim da eleição.
+====================================================================================================
+Número total de rodadas: 2
+Número total de mensagens enviadas: 32
+Tempo total de simulação até a eleição do líder:  8.0
+====================================================================================================
+====================================================================================================
+                                Sistemas Distribuidos Prof. Elias
+                             LOG do Trabalho Pratico 1, Algoritmo 2
+Algoritmo aleatorizado para eleição de líder (Randomized Leader Election Algorithm) baseado no anel.
+                       Este programa foi executado para: N=4 processos.
+====================================================================================================
+RODADA: 1
+====================================================================================================
+[T=0.0] Proc  0 -> Sorteou bit inicial: 1
+[T=0.0] Proc  0 -> Enviou mensagem inicial para Proc  1 (RefId:  0, Bit: 1)
+[T=0.0] Proc  1 -> Sorteou bit inicial: 1
+[T=0.0] Proc  1 -> Enviou mensagem inicial para Proc  2 (RefId:  1, Bit: 1)
+[T=0.0] Proc  2 -> Sorteou bit inicial: 1
+[T=0.0] Proc  2 -> Enviou mensagem inicial para Proc  3 (RefId:  2, Bit: 1)
+[T=0.0] Proc  3 -> Sorteou bit inicial: 1
+[T=0.0] Proc  3 -> Enviou mensagem inicial para Proc  0 (RefId:  3, Bit: 1)
+[T=1.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 1)
+[T=1.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 1)
+[T=1.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 1)
+[T=1.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  1, Bit: 1)
+[T=1.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 1)
+[T=1.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  2, Bit: 1)
+[T=1.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  3, Valor: 1)
+[T=1.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  3, Bit: 1)
+[T=2.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 1)
+[T=2.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  0, Bit: 1)
+[T=2.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 1)
+[T=2.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 1)
+[T=2.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  2, Valor: 1)
+[T=2.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 1)
+[T=2.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  3, Valor: 1)
+[T=2.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  3, Bit: 1)
+[T=3.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 1)
+[T=3.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 1)
+[T=3.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  1, Valor: 1)
+[T=3.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 1)
+[T=3.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 1)
+[T=3.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 1)
+[T=3.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  3, Valor: 1)
+[T=3.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  3, Bit: 1)
+[T=4.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  0, Valor: 1)
+[T=4.0] Proc  0 -> 4 candidatos restantes. Reiniciando eleição...
+[T=4.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 1)
+[T=4.0] Proc  1 -> 4 candidatos restantes. Reiniciando eleição...
+[T=4.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 1)
+[T=4.0] Proc  2 -> 4 candidatos restantes. Reiniciando eleição...
+[T=4.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  3, Valor: 1)
+[T=4.0] Proc  3 -> 4 candidatos restantes. Reiniciando eleição...
+[T=4.0] Proc  0 -> Sorteou novo bit: 1
+[T=4.0] Proc  0 -> Encaminhou mensagem para Proc  1 (RefId:  0, Bit: 1)
+[T=4.0] Proc  1 -> Sorteou novo bit: 0
+[T=4.0] Proc  1 -> Encaminhou mensagem para Proc  2 (RefId:  1, Bit: 0)
+[T=4.0] Proc  2 -> Sorteou novo bit: 0
+[T=4.0] Proc  2 -> Encaminhou mensagem para Proc  3 (RefId:  2, Bit: 0)
+[T=4.0] Proc  3 -> Sorteou novo bit: 1
+[T=4.0] Proc  3 -> Encaminhou mensagem para Proc  0 (RefId:  3, Bit: 1)
+====================================================================================================
+RODADA: 2
+====================================================================================================
+[T=5.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 1)
+[T=5.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 1)
+[T=5.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 0)
+[T=5.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  1, Bit: 0)
+[T=5.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=5.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  2, Bit: 0)
+[T=5.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  3, Valor: 1)
+[T=5.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  3, Bit: 1)
+[T=6.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 1)
+[T=6.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  0, Bit: 1)
+[T=6.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 0)
+[T=6.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 0)
+[T=6.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  2, Valor: 0)
+[T=6.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=6.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  3, Valor: 1)
+[T=6.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  3, Bit: 1)
+[T=7.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 1)
+[T=7.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 1)
+[T=7.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  1, Valor: 0)
+[T=7.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 0)
+[T=7.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=7.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=7.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  3, Valor: 1)
+[T=7.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  3, Bit: 1)
+[T=8.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  0, Valor: 1)
+[T=8.0] Proc  0 -> 2 candidatos restantes. Reiniciando eleição...
+[T=8.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 0)
+[T=8.0] Proc  1 -> 2 candidatos restantes. Reiniciando eleição...
+[T=8.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 0)
+[T=8.0] Proc  2 -> 2 candidatos restantes. Reiniciando eleição...
+[T=8.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  3, Valor: 1)
+[T=8.0] Proc  3 -> 2 candidatos restantes. Reiniciando eleição...
+[T=8.0] Proc  0 -> Sorteou novo bit: 0
+[T=8.0] Proc  0 -> Encaminhou mensagem para Proc  1 (RefId:  0, Bit: 0)
+[T=8.0] Proc  1 -> Encaminhou mensagem para Proc  2 (RefId:  1, Bit: 0)
+[T=8.0] Proc  2 -> Encaminhou mensagem para Proc  3 (RefId:  2, Bit: 0)
+[T=8.0] Proc  3 -> Sorteou novo bit: 0
+[T=8.0] Proc  3 -> Encaminhou mensagem para Proc  0 (RefId:  3, Bit: 0)
+====================================================================================================
+RODADA: 3
+====================================================================================================
+[T=9.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 0)
+[T=9.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 0)
+[T=9.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 0)
+[T=9.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  1, Bit: 0)
+[T=9.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=9.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  2, Bit: 0)
+[T=9.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  3, Valor: 0)
+[T=9.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  3, Bit: 0)
+[T=10.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 0)
+[T=10.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  0, Bit: 0)
+[T=10.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 0)
+[T=10.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 0)
+[T=10.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  2, Valor: 0)
+[T=10.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=10.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  3, Valor: 0)
+[T=10.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  3, Bit: 0)
+[T=11.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 0)
+[T=11.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 0)
+[T=11.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  1, Valor: 0)
+[T=11.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 0)
+[T=11.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=11.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=11.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  3, Valor: 0)
+[T=11.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  3, Bit: 0)
+[T=12.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  0, Valor: 0)
+[T=12.0] Proc  0 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=12.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 0)
+[T=12.0] Proc  1 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=12.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 0)
+[T=12.0] Proc  2 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=12.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  3, Valor: 0)
+[T=12.0] Proc  3 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=12.0] Proc  0 -> Sorteou novo bit: 0
+[T=12.0] Proc  0 -> Encaminhou mensagem para Proc  1 (RefId:  0, Bit: 0)
+[T=12.0] Proc  1 -> Sorteou novo bit: 1
+[T=12.0] Proc  1 -> Encaminhou mensagem para Proc  2 (RefId:  1, Bit: 1)
+[T=12.0] Proc  2 -> Sorteou novo bit: 1
+[T=12.0] Proc  2 -> Encaminhou mensagem para Proc  3 (RefId:  2, Bit: 1)
+[T=12.0] Proc  3 -> Sorteou novo bit: 0
+[T=12.0] Proc  3 -> Encaminhou mensagem para Proc  0 (RefId:  3, Bit: 0)
+====================================================================================================
+RODADA: 4
+====================================================================================================
+[T=13.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 0)
+[T=13.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 0)
+[T=13.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 1)
+[T=13.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  1, Bit: 1)
+[T=13.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 1)
+[T=13.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  2, Bit: 1)
+[T=13.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  3, Valor: 0)
+[T=13.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  3, Bit: 0)
+[T=14.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 0)
+[T=14.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  0, Bit: 0)
+[T=14.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 1)
+[T=14.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 1)
+[T=14.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  2, Valor: 1)
+[T=14.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 1)
+[T=14.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  3, Valor: 0)
+[T=14.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  3, Bit: 0)
+[T=15.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 0)
+[T=15.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 0)
+[T=15.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  1, Valor: 1)
+[T=15.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 1)
+[T=15.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 1)
+[T=15.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 1)
+[T=15.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  3, Valor: 0)
+[T=15.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  3, Bit: 0)
+[T=16.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  0, Valor: 0)
+[T=16.0] Proc  0 -> 2 candidatos restantes. Reiniciando eleição...
+[T=16.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 1)
+[T=16.0] Proc  1 -> 2 candidatos restantes. Reiniciando eleição...
+[T=16.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 1)
+[T=16.0] Proc  2 -> 2 candidatos restantes. Reiniciando eleição...
+[T=16.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  3, Valor: 0)
+[T=16.0] Proc  3 -> 2 candidatos restantes. Reiniciando eleição...
+[T=16.0] Proc  0 -> Encaminhou mensagem para Proc  1 (RefId:  0, Bit: 0)
+[T=16.0] Proc  1 -> Sorteou novo bit: 1
+[T=16.0] Proc  1 -> Encaminhou mensagem para Proc  2 (RefId:  1, Bit: 1)
+[T=16.0] Proc  2 -> Sorteou novo bit: 0
+[T=16.0] Proc  2 -> Encaminhou mensagem para Proc  3 (RefId:  2, Bit: 0)
+[T=16.0] Proc  3 -> Encaminhou mensagem para Proc  0 (RefId:  3, Bit: 0)
+====================================================================================================
+RODADA: 5
+====================================================================================================
+[T=17.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 0)
+[T=17.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 0)
+[T=17.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 1)
+[T=17.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  1, Bit: 1)
+[T=17.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=17.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  2, Bit: 0)
+[T=17.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  3, Valor: 0)
+[T=17.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  3, Bit: 0)
+[T=18.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 0)
+[T=18.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  0, Bit: 0)
+[T=18.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 1)
+[T=18.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 1)
+[T=18.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  2, Valor: 0)
+[T=18.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=18.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  3, Valor: 0)
+[T=18.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  3, Bit: 0)
+[T=19.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 0)
+[T=19.0] Proc  3 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 0)
+[T=19.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  1, Valor: 1)
+[T=19.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 1)
+[T=19.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=19.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=19.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  3, Valor: 0)
+[T=19.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  3, Bit: 0)
+[T=20.0] Proc  0 -> Recebeu mensagem do Proc  3 (Origem/RefId:  0, Valor: 0)
+[T=20.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 1)
+[T=20.0] Proc  1 -> IDENTIFICOU LÍDER ÚNICO! Fim da eleição.
+====================================================================================================
+Número total de rodadas: 5
+Número total de mensagens enviadas: 80
+Tempo total de simulação até a eleição do líder: 20.0
+====================================================================================================
+====================================================================================================
+                                Sistemas Distribuidos Prof. Elias
+                             LOG do Trabalho Pratico 1, Algoritmo 2
+Algoritmo aleatorizado para eleição de líder (Randomized Leader Election Algorithm) baseado no anel.
+                       Este programa foi executado para: N=5 processos.
+====================================================================================================
+RODADA: 1
+====================================================================================================
+[T=0.0] Proc  0 -> Sorteou bit inicial: 0
+[T=0.0] Proc  0 -> Enviou mensagem inicial para Proc  1 (RefId:  0, Bit: 0)
+[T=0.0] Proc  1 -> Sorteou bit inicial: 1
+[T=0.0] Proc  1 -> Enviou mensagem inicial para Proc  2 (RefId:  1, Bit: 1)
+[T=0.0] Proc  2 -> Sorteou bit inicial: 0
+[T=0.0] Proc  2 -> Enviou mensagem inicial para Proc  3 (RefId:  2, Bit: 0)
+[T=0.0] Proc  3 -> Sorteou bit inicial: 1
+[T=0.0] Proc  3 -> Enviou mensagem inicial para Proc  4 (RefId:  3, Bit: 1)
+[T=0.0] Proc  4 -> Sorteou bit inicial: 1
+[T=0.0] Proc  4 -> Enviou mensagem inicial para Proc  0 (RefId:  4, Bit: 1)
+[T=1.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 0)
+[T=1.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 0)
+[T=1.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 1)
+[T=1.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  1, Bit: 1)
+[T=1.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=1.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  2, Bit: 0)
+[T=1.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  3, Valor: 1)
+[T=1.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  3, Bit: 1)
+[T=1.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  4, Valor: 1)
+[T=1.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  4, Bit: 1)
+[T=2.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 0)
+[T=2.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  0, Bit: 0)
+[T=2.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 1)
+[T=2.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  1, Bit: 1)
+[T=2.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  2, Valor: 0)
+[T=2.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  2, Bit: 0)
+[T=2.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  3, Valor: 1)
+[T=2.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  3, Bit: 1)
+[T=2.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  4, Valor: 1)
+[T=2.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  4, Bit: 1)
+[T=3.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 0)
+[T=3.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  0, Bit: 0)
+[T=3.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  1, Valor: 1)
+[T=3.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 1)
+[T=3.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  2, Valor: 0)
+[T=3.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=3.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  3, Valor: 1)
+[T=3.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  3, Bit: 1)
+[T=3.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  4, Valor: 1)
+[T=3.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  4, Bit: 1)
+[T=4.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  0, Valor: 0)
+[T=4.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 0)
+[T=4.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  1, Valor: 1)
+[T=4.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 1)
+[T=4.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=4.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=4.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  3, Valor: 1)
+[T=4.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  3, Bit: 1)
+[T=4.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  4, Valor: 1)
+[T=4.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  4, Bit: 1)
+[T=5.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  0, Valor: 0)
+[T=5.0] Proc  0 -> 3 candidatos restantes. Reiniciando eleição...
+[T=5.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 1)
+[T=5.0] Proc  1 -> 3 candidatos restantes. Reiniciando eleição...
+[T=5.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 0)
+[T=5.0] Proc  2 -> 3 candidatos restantes. Reiniciando eleição...
+[T=5.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  3, Valor: 1)
+[T=5.0] Proc  3 -> 3 candidatos restantes. Reiniciando eleição...
+[T=5.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  4, Valor: 1)
+[T=5.0] Proc  4 -> 3 candidatos restantes. Reiniciando eleição...
+[T=5.0] Proc  0 -> Encaminhou mensagem para Proc  1 (RefId:  0, Bit: 0)
+[T=5.0] Proc  1 -> Sorteou novo bit: 1
+[T=5.0] Proc  1 -> Encaminhou mensagem para Proc  2 (RefId:  1, Bit: 1)
+[T=5.0] Proc  2 -> Encaminhou mensagem para Proc  3 (RefId:  2, Bit: 0)
+[T=5.0] Proc  3 -> Sorteou novo bit: 1
+[T=5.0] Proc  3 -> Encaminhou mensagem para Proc  4 (RefId:  3, Bit: 1)
+[T=5.0] Proc  4 -> Sorteou novo bit: 1
+[T=5.0] Proc  4 -> Encaminhou mensagem para Proc  0 (RefId:  4, Bit: 1)
+====================================================================================================
+RODADA: 2
+====================================================================================================
+[T=6.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 0)
+[T=6.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 0)
+[T=6.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 1)
+[T=6.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  1, Bit: 1)
+[T=6.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=6.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  2, Bit: 0)
+[T=6.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  3, Valor: 1)
+[T=6.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  3, Bit: 1)
+[T=6.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  4, Valor: 1)
+[T=6.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  4, Bit: 1)
+[T=7.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 0)
+[T=7.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  0, Bit: 0)
+[T=7.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 1)
+[T=7.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  1, Bit: 1)
+[T=7.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  2, Valor: 0)
+[T=7.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  2, Bit: 0)
+[T=7.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  3, Valor: 1)
+[T=7.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  3, Bit: 1)
+[T=7.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  4, Valor: 1)
+[T=7.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  4, Bit: 1)
+[T=8.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 0)
+[T=8.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  0, Bit: 0)
+[T=8.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  1, Valor: 1)
+[T=8.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 1)
+[T=8.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  2, Valor: 0)
+[T=8.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=8.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  3, Valor: 1)
+[T=8.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  3, Bit: 1)
+[T=8.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  4, Valor: 1)
+[T=8.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  4, Bit: 1)
+[T=9.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  0, Valor: 0)
+[T=9.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 0)
+[T=9.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  1, Valor: 1)
+[T=9.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 1)
+[T=9.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=9.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=9.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  3, Valor: 1)
+[T=9.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  3, Bit: 1)
+[T=9.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  4, Valor: 1)
+[T=9.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  4, Bit: 1)
+[T=10.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  0, Valor: 0)
+[T=10.0] Proc  0 -> 3 candidatos restantes. Reiniciando eleição...
+[T=10.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 1)
+[T=10.0] Proc  1 -> 3 candidatos restantes. Reiniciando eleição...
+[T=10.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 0)
+[T=10.0] Proc  2 -> 3 candidatos restantes. Reiniciando eleição...
+[T=10.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  3, Valor: 1)
+[T=10.0] Proc  3 -> 3 candidatos restantes. Reiniciando eleição...
+[T=10.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  4, Valor: 1)
+[T=10.0] Proc  4 -> 3 candidatos restantes. Reiniciando eleição...
+[T=10.0] Proc  0 -> Encaminhou mensagem para Proc  1 (RefId:  0, Bit: 0)
+[T=10.0] Proc  1 -> Sorteou novo bit: 1
+[T=10.0] Proc  1 -> Encaminhou mensagem para Proc  2 (RefId:  1, Bit: 1)
+[T=10.0] Proc  2 -> Encaminhou mensagem para Proc  3 (RefId:  2, Bit: 0)
+[T=10.0] Proc  3 -> Sorteou novo bit: 0
+[T=10.0] Proc  3 -> Encaminhou mensagem para Proc  4 (RefId:  3, Bit: 0)
+[T=10.0] Proc  4 -> Sorteou novo bit: 0
+[T=10.0] Proc  4 -> Encaminhou mensagem para Proc  0 (RefId:  4, Bit: 0)
+====================================================================================================
+RODADA: 3
+====================================================================================================
+[T=11.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 0)
+[T=11.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 0)
+[T=11.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 1)
+[T=11.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  1, Bit: 1)
+[T=11.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=11.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  2, Bit: 0)
+[T=11.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  3, Valor: 0)
+[T=11.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  3, Bit: 0)
+[T=11.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  4, Valor: 0)
+[T=11.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  4, Bit: 0)
+[T=12.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 0)
+[T=12.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  0, Bit: 0)
+[T=12.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 1)
+[T=12.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  1, Bit: 1)
+[T=12.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  2, Valor: 0)
+[T=12.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  2, Bit: 0)
+[T=12.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  3, Valor: 0)
+[T=12.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  3, Bit: 0)
+[T=12.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  4, Valor: 0)
+[T=12.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  4, Bit: 0)
+[T=13.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 0)
+[T=13.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  0, Bit: 0)
+[T=13.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  1, Valor: 1)
+[T=13.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 1)
+[T=13.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  2, Valor: 0)
+[T=13.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=13.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  3, Valor: 0)
+[T=13.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  3, Bit: 0)
+[T=13.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  4, Valor: 0)
+[T=13.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  4, Bit: 0)
+[T=14.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  0, Valor: 0)
+[T=14.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 0)
+[T=14.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  1, Valor: 1)
+[T=14.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 1)
+[T=14.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=14.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=14.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  3, Valor: 0)
+[T=14.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  3, Bit: 0)
+[T=14.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  4, Valor: 0)
+[T=14.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  4, Bit: 0)
+[T=15.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  0, Valor: 0)
+[T=15.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 1)
+[T=15.0] Proc  1 -> IDENTIFICOU LÍDER ÚNICO! Fim da eleição.
+====================================================================================================
+Número total de rodadas: 3
+Número total de mensagens enviadas: 75
+Tempo total de simulação até a eleição do líder: 15.0
+====================================================================================================
+====================================================================================================
+                                Sistemas Distribuidos Prof. Elias
+                             LOG do Trabalho Pratico 1, Algoritmo 2
+Algoritmo aleatorizado para eleição de líder (Randomized Leader Election Algorithm) baseado no anel.
+                       Este programa foi executado para: N=5 processos.
+====================================================================================================
+RODADA: 1
+====================================================================================================
+[T=0.0] Proc  0 -> Sorteou bit inicial: 0
+[T=0.0] Proc  0 -> Enviou mensagem inicial para Proc  1 (RefId:  0, Bit: 0)
+[T=0.0] Proc  1 -> Sorteou bit inicial: 0
+[T=0.0] Proc  1 -> Enviou mensagem inicial para Proc  2 (RefId:  1, Bit: 0)
+[T=0.0] Proc  2 -> Sorteou bit inicial: 1
+[T=0.0] Proc  2 -> Enviou mensagem inicial para Proc  3 (RefId:  2, Bit: 1)
+[T=0.0] Proc  3 -> Sorteou bit inicial: 0
+[T=0.0] Proc  3 -> Enviou mensagem inicial para Proc  4 (RefId:  3, Bit: 0)
+[T=0.0] Proc  4 -> Sorteou bit inicial: 1
+[T=0.0] Proc  4 -> Enviou mensagem inicial para Proc  0 (RefId:  4, Bit: 1)
+[T=1.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 0)
+[T=1.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 0)
+[T=1.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 0)
+[T=1.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  1, Bit: 0)
+[T=1.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 1)
+[T=1.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  2, Bit: 1)
+[T=1.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  3, Valor: 0)
+[T=1.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  3, Bit: 0)
+[T=1.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  4, Valor: 1)
+[T=1.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  4, Bit: 1)
+[T=2.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 0)
+[T=2.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  0, Bit: 0)
+[T=2.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 0)
+[T=2.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  1, Bit: 0)
+[T=2.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  2, Valor: 1)
+[T=2.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  2, Bit: 1)
+[T=2.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  3, Valor: 0)
+[T=2.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  3, Bit: 0)
+[T=2.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  4, Valor: 1)
+[T=2.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  4, Bit: 1)
+[T=3.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 0)
+[T=3.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  0, Bit: 0)
+[T=3.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  1, Valor: 0)
+[T=3.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 0)
+[T=3.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  2, Valor: 1)
+[T=3.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 1)
+[T=3.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  3, Valor: 0)
+[T=3.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  3, Bit: 0)
+[T=3.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  4, Valor: 1)
+[T=3.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  4, Bit: 1)
+[T=4.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  0, Valor: 0)
+[T=4.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 0)
+[T=4.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  1, Valor: 0)
+[T=4.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 0)
+[T=4.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 1)
+[T=4.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 1)
+[T=4.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  3, Valor: 0)
+[T=4.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  3, Bit: 0)
+[T=4.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  4, Valor: 1)
+[T=4.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  4, Bit: 1)
+[T=5.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  0, Valor: 0)
+[T=5.0] Proc  0 -> 2 candidatos restantes. Reiniciando eleição...
+[T=5.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 0)
+[T=5.0] Proc  1 -> 2 candidatos restantes. Reiniciando eleição...
+[T=5.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 1)
+[T=5.0] Proc  2 -> 2 candidatos restantes. Reiniciando eleição...
+[T=5.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  3, Valor: 0)
+[T=5.0] Proc  3 -> 2 candidatos restantes. Reiniciando eleição...
+[T=5.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  4, Valor: 1)
+[T=5.0] Proc  4 -> 2 candidatos restantes. Reiniciando eleição...
+[T=5.0] Proc  0 -> Encaminhou mensagem para Proc  1 (RefId:  0, Bit: 0)
+[T=5.0] Proc  1 -> Encaminhou mensagem para Proc  2 (RefId:  1, Bit: 0)
+[T=5.0] Proc  2 -> Sorteou novo bit: 0
+[T=5.0] Proc  2 -> Encaminhou mensagem para Proc  3 (RefId:  2, Bit: 0)
+[T=5.0] Proc  3 -> Encaminhou mensagem para Proc  4 (RefId:  3, Bit: 0)
+[T=5.0] Proc  4 -> Sorteou novo bit: 0
+[T=5.0] Proc  4 -> Encaminhou mensagem para Proc  0 (RefId:  4, Bit: 0)
+====================================================================================================
+RODADA: 2
+====================================================================================================
+[T=6.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 0)
+[T=6.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 0)
+[T=6.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 0)
+[T=6.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  1, Bit: 0)
+[T=6.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=6.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  2, Bit: 0)
+[T=6.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  3, Valor: 0)
+[T=6.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  3, Bit: 0)
+[T=6.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  4, Valor: 0)
+[T=6.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  4, Bit: 0)
+[T=7.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 0)
+[T=7.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  0, Bit: 0)
+[T=7.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 0)
+[T=7.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  1, Bit: 0)
+[T=7.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  2, Valor: 0)
+[T=7.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  2, Bit: 0)
+[T=7.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  3, Valor: 0)
+[T=7.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  3, Bit: 0)
+[T=7.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  4, Valor: 0)
+[T=7.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  4, Bit: 0)
+[T=8.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 0)
+[T=8.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  0, Bit: 0)
+[T=8.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  1, Valor: 0)
+[T=8.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 0)
+[T=8.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  2, Valor: 0)
+[T=8.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=8.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  3, Valor: 0)
+[T=8.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  3, Bit: 0)
+[T=8.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  4, Valor: 0)
+[T=8.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  4, Bit: 0)
+[T=9.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  0, Valor: 0)
+[T=9.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 0)
+[T=9.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  1, Valor: 0)
+[T=9.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 0)
+[T=9.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=9.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=9.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  3, Valor: 0)
+[T=9.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  3, Bit: 0)
+[T=9.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  4, Valor: 0)
+[T=9.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  4, Bit: 0)
+[T=10.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  0, Valor: 0)
+[T=10.0] Proc  0 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=10.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 0)
+[T=10.0] Proc  1 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=10.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 0)
+[T=10.0] Proc  2 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=10.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  3, Valor: 0)
+[T=10.0] Proc  3 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=10.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  4, Valor: 0)
+[T=10.0] Proc  4 -> Nenhum candidato ativo restou nesta rodada. Reiniciando...
+[T=10.0] Proc  0 -> Sorteou novo bit: 0
+[T=10.0] Proc  0 -> Encaminhou mensagem para Proc  1 (RefId:  0, Bit: 0)
+[T=10.0] Proc  1 -> Sorteou novo bit: 1
+[T=10.0] Proc  1 -> Encaminhou mensagem para Proc  2 (RefId:  1, Bit: 1)
+[T=10.0] Proc  2 -> Sorteou novo bit: 1
+[T=10.0] Proc  2 -> Encaminhou mensagem para Proc  3 (RefId:  2, Bit: 1)
+[T=10.0] Proc  3 -> Sorteou novo bit: 0
+[T=10.0] Proc  3 -> Encaminhou mensagem para Proc  4 (RefId:  3, Bit: 0)
+[T=10.0] Proc  4 -> Sorteou novo bit: 1
+[T=10.0] Proc  4 -> Encaminhou mensagem para Proc  0 (RefId:  4, Bit: 1)
+====================================================================================================
+RODADA: 3
+====================================================================================================
+[T=11.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 0)
+[T=11.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 0)
+[T=11.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 1)
+[T=11.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  1, Bit: 1)
+[T=11.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 1)
+[T=11.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  2, Bit: 1)
+[T=11.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  3, Valor: 0)
+[T=11.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  3, Bit: 0)
+[T=11.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  4, Valor: 1)
+[T=11.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  4, Bit: 1)
+[T=12.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 0)
+[T=12.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  0, Bit: 0)
+[T=12.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 1)
+[T=12.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  1, Bit: 1)
+[T=12.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  2, Valor: 1)
+[T=12.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  2, Bit: 1)
+[T=12.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  3, Valor: 0)
+[T=12.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  3, Bit: 0)
+[T=12.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  4, Valor: 1)
+[T=12.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  4, Bit: 1)
+[T=13.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 0)
+[T=13.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  0, Bit: 0)
+[T=13.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  1, Valor: 1)
+[T=13.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 1)
+[T=13.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  2, Valor: 1)
+[T=13.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 1)
+[T=13.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  3, Valor: 0)
+[T=13.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  3, Bit: 0)
+[T=13.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  4, Valor: 1)
+[T=13.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  4, Bit: 1)
+[T=14.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  0, Valor: 0)
+[T=14.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 0)
+[T=14.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  1, Valor: 1)
+[T=14.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 1)
+[T=14.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 1)
+[T=14.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 1)
+[T=14.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  3, Valor: 0)
+[T=14.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  3, Bit: 0)
+[T=14.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  4, Valor: 1)
+[T=14.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  4, Bit: 1)
+[T=15.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  0, Valor: 0)
+[T=15.0] Proc  0 -> 3 candidatos restantes. Reiniciando eleição...
+[T=15.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 1)
+[T=15.0] Proc  1 -> 3 candidatos restantes. Reiniciando eleição...
+[T=15.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 1)
+[T=15.0] Proc  2 -> 3 candidatos restantes. Reiniciando eleição...
+[T=15.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  3, Valor: 0)
+[T=15.0] Proc  3 -> 3 candidatos restantes. Reiniciando eleição...
+[T=15.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  4, Valor: 1)
+[T=15.0] Proc  4 -> 3 candidatos restantes. Reiniciando eleição...
+[T=15.0] Proc  0 -> Encaminhou mensagem para Proc  1 (RefId:  0, Bit: 0)
+[T=15.0] Proc  1 -> Sorteou novo bit: 0
+[T=15.0] Proc  1 -> Encaminhou mensagem para Proc  2 (RefId:  1, Bit: 0)
+[T=15.0] Proc  2 -> Sorteou novo bit: 0
+[T=15.0] Proc  2 -> Encaminhou mensagem para Proc  3 (RefId:  2, Bit: 0)
+[T=15.0] Proc  3 -> Encaminhou mensagem para Proc  4 (RefId:  3, Bit: 0)
+[T=15.0] Proc  4 -> Sorteou novo bit: 1
+[T=15.0] Proc  4 -> Encaminhou mensagem para Proc  0 (RefId:  4, Bit: 1)
+====================================================================================================
+RODADA: 4
+====================================================================================================
+[T=16.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  0, Valor: 0)
+[T=16.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  0, Bit: 0)
+[T=16.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  1, Valor: 0)
+[T=16.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  1, Bit: 0)
+[T=16.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  2, Valor: 0)
+[T=16.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  2, Bit: 0)
+[T=16.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  3, Valor: 0)
+[T=16.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  3, Bit: 0)
+[T=16.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  4, Valor: 1)
+[T=16.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  4, Bit: 1)
+[T=17.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  0, Valor: 0)
+[T=17.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  0, Bit: 0)
+[T=17.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  1, Valor: 0)
+[T=17.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  1, Bit: 0)
+[T=17.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  2, Valor: 0)
+[T=17.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  2, Bit: 0)
+[T=17.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  3, Valor: 0)
+[T=17.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  3, Bit: 0)
+[T=17.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  4, Valor: 1)
+[T=17.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  4, Bit: 1)
+[T=18.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  0, Valor: 0)
+[T=18.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  0, Bit: 0)
+[T=18.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  1, Valor: 0)
+[T=18.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  1, Bit: 0)
+[T=18.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  2, Valor: 0)
+[T=18.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  2, Bit: 0)
+[T=18.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  3, Valor: 0)
+[T=18.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  3, Bit: 0)
+[T=18.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  4, Valor: 1)
+[T=18.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  4, Bit: 1)
+[T=19.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  0, Valor: 0)
+[T=19.0] Proc  4 -> Repassou a mensagem para Proc  0 (RefId:  0, Bit: 0)
+[T=19.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  1, Valor: 0)
+[T=19.0] Proc  0 -> Repassou a mensagem para Proc  1 (RefId:  1, Bit: 0)
+[T=19.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  2, Valor: 0)
+[T=19.0] Proc  1 -> Repassou a mensagem para Proc  2 (RefId:  2, Bit: 0)
+[T=19.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  3, Valor: 0)
+[T=19.0] Proc  2 -> Repassou a mensagem para Proc  3 (RefId:  3, Bit: 0)
+[T=19.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  4, Valor: 1)
+[T=19.0] Proc  3 -> Repassou a mensagem para Proc  4 (RefId:  4, Bit: 1)
+[T=20.0] Proc  0 -> Recebeu mensagem do Proc  4 (Origem/RefId:  0, Valor: 0)
+[T=20.0] Proc  1 -> Recebeu mensagem do Proc  0 (Origem/RefId:  1, Valor: 0)
+[T=20.0] Proc  2 -> Recebeu mensagem do Proc  1 (Origem/RefId:  2, Valor: 0)
+[T=20.0] Proc  3 -> Recebeu mensagem do Proc  2 (Origem/RefId:  3, Valor: 0)
+[T=20.0] Proc  4 -> Recebeu mensagem do Proc  3 (Origem/RefId:  4, Valor: 1)
+[T=20.0] Proc  4 -> IDENTIFICOU LÍDER ÚNICO! Fim da eleição.
+====================================================================================================
+Número total de rodadas: 4
+Número total de mensagens enviadas: 100
+Tempo total de simulação até a eleição do líder: 20.0
+====================================================================================================
